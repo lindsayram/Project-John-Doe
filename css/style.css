@@ -1,0 +1,96 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Général */
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white:rgba(247, 255, 242, 1);
+    --orange:rgba(255, 154, 22, 1);
+    --red: rgba(231, 23, 74, 1);
+    --darkblue:rgba(1, 24, 38, 1);
+    --aqua: rgba(44, 193, 170, 1);
+    --primaryfont:"Open sans", sans-serif;
+    --title:"Raleway", sans-serif;
+}
+
+p{
+    color: var(--white);
+    font-weight: 400;
+    font-family: var(--primaryfont);
+}
+
+a{
+    cursor: pointer;
+}
+
+button{
+    font-family: var(--primaryfont);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Format desktop */
+/* Header */
+
+header{
+    max-width: 1470px;
+    background-color: var(--darkblue);
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 10px;
+
+    img{
+        width:180px
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+            
+            li{
+            
+                a{
+                    text-decoration: none;
+                    color: var(--orange);
+                    transition: all 0.3s ease-in-out;
+                    font-family: var(--primaryfont);
+                    font-size: 16px;
+                    font-weight: 400;
+                    
+                    &:hover{
+                        color: var(--red);
+                        transition: all 0.3s ease-in-out;
+                    }           
+                
+                }
+                button{
+                    background-color: var(--orange);
+                    color: white;
+                    padding: 7px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: var(--red);
+                    }
+                }
+            }
+        }
+    }
+
+}
