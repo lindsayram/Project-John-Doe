@@ -39,58 +39,72 @@ button{
 /* Header */
 
 header{
-    max-width: 1470px;
     background-color: var(--darkblue);
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 17px 10px;
+    
+    .container{
+        max-width: 1470px;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 10px;
 
-    img{
-        width:180px
-    }
+        img{
+            width:180px
+        }
 
-    p{
-        font-size: 16px;
-    }
+        p{
+            font-size: 16px;
+        }
 
-    nav{
-        ul{
-            display: flex;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-            gap: 20px;
-            
-            li{
-            
-                a{
-                    text-decoration: none;
-                    color: var(--orange);
-                    transition: all 0.3s ease-in-out;
-                    font-family: var(--primaryfont);
-                    font-size: 16px;
-                    font-weight: 400;
-                    
-                    &:hover{
-                        color: var(--red);
-                        transition: all 0.3s ease-in-out;
-                    }           
+        nav{
+            ul{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                padding: 0;
+                gap: 20px;
                 
-                }
-                button{
-                    background-color: var(--orange);
-                    color: white;
-                    padding: 7px;
-                    cursor: pointer;
+                li{
+                
+                    a{
+                        text-decoration: none;
+                        color: var(--orange);
+                        transition: all 0.3s ease-in-out;
+                        font-family: var(--primaryfont);
+                        font-size: 16px;
+                        font-weight: 400;
+                        
+                        &:hover{
+                            color: var(--red);
+                            transition: all 0.3s ease-in-out;
+                        }           
+                    
+                    }
+                    button{
+                        background-color: var(--orange);
+                        color: white;
+                        padding: 7px;
+                        cursor: pointer;
 
-                    &:hover{
-                        background-color: var(--red);
+                        &:hover{
+                            background-color: var(--red);
+                        }
                     }
                 }
             }
         }
     }
+}
 
+/* Main */
+
+/* Footer */
+
+footer{
+    background-color: var(--aqua);
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 0;
 }
