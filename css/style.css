@@ -15,8 +15,17 @@
     --red: rgba(231, 23, 74, 1);
     --darkblue:rgba(1, 24, 38, 1);
     --aqua: rgba(44, 193, 170, 1);
+    --black:rgba(1, 24, 38, 1);
+
     --primaryfont:"Open sans", sans-serif;
     --title:"Raleway", sans-serif;
+}
+
+h1,h2{
+    color: var(--white);
+    font-family: var(--title);
+    font-size: 36px;
+    font-weight: bold;
 }
 
 p{
@@ -35,6 +44,14 @@ button{
     font-size: 16px;
 }
 
+.container{
+    max-width: 1470px;
+}
+
+#qui-suis-je, #ma-formation{
+    max-width: 1440px;
+}
+
 /* Format desktop */
 /* Header */
 
@@ -42,7 +59,6 @@ header{
     background-color: var(--darkblue);
     
     .container{
-        max-width: 1470px;
         display: flex;
         margin: auto;
         justify-content: space-between;
@@ -98,6 +114,73 @@ header{
 }
 
 /* Main */
+main{
+    background-color: var(--darkblue);
+    padding-top: 60px;
+
+    .container{
+        margin: auto;
+
+        #qui-suis-je{
+            display: flex;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            margin: auto;
+            gap: 50px;
+
+            div{
+                max-width: 576px;
+
+                p{
+                font-size: 18px;
+                margin: 30px 0;
+                }
+
+                button{
+                    background-color: var(--orange);
+                    color: white;
+                    padding: 7px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: var(--red);
+                    }
+                }
+
+            }
+
+            
+
+            img{
+            object-fit: cover;
+            width: 50%;
+            height: 664px;
+            }
+        }
+
+        #ma-formation{
+            margin: 50px auto;
+
+            h2{
+                text-align: center;
+            }
+            
+            div{
+                max-width: 1140px;
+
+                img{}
+                .content{
+                    background-color: var(--orange);
+                    
+                    button{
+                        background-color: var(--black);
+                        color: var(--white);
+                    }
+                }
+
+            }
+        }
+    }
+}
 
 /* Footer */
 
