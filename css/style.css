@@ -28,6 +28,13 @@ h1,h2{
     font-weight: bold;
 }
 
+h3{
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
 p{
     color: var(--white);
     font-weight: 400;
@@ -36,6 +43,9 @@ p{
 
 a{
     cursor: pointer;
+    font-family: var(--primaryfont);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 button{
@@ -57,6 +67,7 @@ button{
 
 header{
     background-color: var(--darkblue);
+    padding-bottom: 40px;
     
     .container{
         display: flex;
@@ -80,16 +91,16 @@ header{
                 list-style: none;
                 padding: 0;
                 gap: 20px;
+                padding-top: 20px;
                 
                 li{
+                    opacity: 0;
+                    animation:translate 1s linear forwards;
                 
                     a{
                         text-decoration: none;
                         color: var(--orange);
                         transition: all 0.3s ease-in-out;
-                        font-family: var(--primaryfont);
-                        font-size: 16px;
-                        font-weight: 400;
                         
                         &:hover{
                             color: var(--red);
@@ -97,6 +108,10 @@ header{
                         }           
                     
                     }
+                    #accueil{
+                        color: var(--red);
+                    }
+                    
                     button{
                         background-color: var(--orange);
                         color: white;
@@ -107,9 +122,30 @@ header{
                             background-color: var(--red);
                         }
                     }
+                    
                 }
+                li:nth-child(1) {animation-delay:0s}
+                li:nth-child(2) {animation-delay:0.2s}
+                li:nth-child(3) {animation-delay:0.4s}
+                li:nth-child(4) {animation-delay:0.6s}
+                li:nth-child(5) {animation-delay:0.8s}
+                li:nth-child(6) {animation-delay:1s}
             }
         }
+    }
+}
+
+/* Animation header */
+
+@keyframes translate {
+    from{
+        opacity: 0;
+        transform:translate(0px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0, -20px);
     }
 }
 
@@ -124,11 +160,18 @@ main{
         #qui-suis-je{
             display: flex;
             /* grid-template-columns: 1fr 1fr 1fr; */
-            margin: auto;
+            margin: 30px auto;
             gap: 50px;
 
             div{
                 max-width: 576px;
+                animation: translate 2s linear forwards;
+                animation-delay: 1.2s;
+                opacity: 0;
+
+                h1{
+                    padding-top: 30px;
+                }
 
                 p{
                 font-size: 18px;
@@ -148,13 +191,16 @@ main{
 
             }
 
-            
-
             img{
             object-fit: cover;
             width: 50%;
             height: 664px;
+            opacity:0;
+            animation: zoom 2s linear forwards;
+            animation-delay: 1.4s;
             }
+
+            
         }
 
         #ma-formation{
@@ -162,23 +208,68 @@ main{
 
             h2{
                 text-align: center;
+                margin-bottom: 50px;
             }
             
-            div{
+            #dev{
                 max-width: 1140px;
+                display: flex;
+                justify-content: center;
+                
 
-                img{}
+                img{
+                    /* z-index: 0; */
+                    position: relative;
+                    width: 70%;
+                    
+                }
                 .content{
                     background-color: var(--orange);
-                    
-                    button{
-                        background-color: var(--black);
+                    position: absolute;
+                    /* z-index: 1; */
+                    width: 23%;
+                    right: 15em;
+                    top: 70em;
+                    padding: 30px;
+                    width: 452px;
+                    height: 442px;
+
+                    h3{
                         color: var(--white);
                     }
-                }
 
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                
+                a{
+                    background-color: var(--black);
+                    color: var(--white);
+                    position: absolute;
+                    border: 1px solid var(--white);
+                    text-decoration: none;
+                    color: var(--white);
+                    padding: 10px;
+
+                    &:hover{
+                        background-color: var(--red);
+                    }
+                }
             }
         }
+    }
+}
+
+@keyframes zoom {
+    from{
+        opacity: 0;
+        transform:scale(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1.02);
     }
 }
 
