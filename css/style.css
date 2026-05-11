@@ -41,6 +41,12 @@ p{
     font-family: var(--primaryfont);
 }
 
+li, summary{
+    font-family: var(--primaryfont);
+    font-size: 18px;
+    font-weight: 600;
+}
+
 a{
     cursor: pointer;
     font-family: var(--primaryfont);
@@ -58,7 +64,7 @@ button{
     max-width: 1470px;
 }
 
-#qui-suis-je, #ma-formation{
+#qui-suis-je, #ma-formation, #mes-competences{
     max-width: 1440px;
 }
 
@@ -224,7 +230,7 @@ main{
                 img{
                     /* z-index: 0; */
                     position: relative;
-                    width: 70%;
+                    width: 100%;
                     
                 }
                 .content{
@@ -306,13 +312,55 @@ main{
                 img{
                     z-index: 0;
                     position: relative;
-                    width: 70%;                   
+                    width: 100%;                   
                 }
                 
             }
         }
+
+        #mes-competences{
+            margin: auto;
+            padding: 30px 0;
+
+            h2{
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            div{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+
+                article{
+                    display: grid;
+                    gap: 20px;
+
+                    details{
+                        background-color: var(--white);
+
+                        summary{
+                            color: var(--orange);
+                            list-style: none;
+                            padding: 10px;
+                            display: block;
+                            cursor: pointer;
+                            width: fit-content;
+                            border-bottom: 2px solid var(--red);
+                        }
+
+                        /* ul{
+                            background-color: var(--white);
+                        } */
+                    }
+                }                
+            }
+        }      
     }
 }
+
+
+
 
 @keyframes zoom {
     from{
