@@ -66,9 +66,9 @@ button{
     max-width: 1470px;
 }
 
-#qui-suis-je, #ma-formation, #mes-competences, #mes-projets{
+/* #qui-suis-je, #ma-formation, #mes-competences, #mes-projets{
     max-width: 1440px;
-}
+} */
 
 /* Format desktop */
 /* Header */
@@ -96,6 +96,10 @@ header{
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
+
+            .hidden{
+                display:none;
+            }
 
             ul{
                 display: flex;
@@ -153,7 +157,7 @@ header{
                 position: absolute;
                 z-index: 1;
                 box-shadow: 0px 0px 5px 13px rgba(0, 0, 0, 0.25);
-                top: 90px;
+                top: 120px;
                 visibility: hidden;
 
                 &:target{
@@ -164,6 +168,7 @@ header{
                 h2{
                     color: var(--black);
                 }
+
                 form{
                     display: flex;
                     flex-direction: column;
@@ -205,10 +210,8 @@ header{
                         right: -5px;
                         color: var(--orange);
                         font-size: 45px;
-                    }
-            }
-
-            
+                }
+            }            
         }
     }
 }
@@ -236,8 +239,9 @@ main{
         margin: auto;
 
         #qui-suis-je{
-            display: flex;
-            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* display: flex; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             margin: 30px auto;
             gap: 50px;
             padding: 0 20px;
@@ -343,14 +347,12 @@ main{
 
             img{
             object-fit: cover;
-            width: 50%;
+            width: 100%;
             height: 664px;
             opacity:0;
             animation: zoom 2s linear forwards;
             animation-delay: 1.4s;
             }
-
-            
         }
 
         #ma-formation{
@@ -426,6 +428,7 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    z-index: 1;
 
                     h3{
                         color: var(--white);
@@ -454,7 +457,8 @@ main{
                 img{
                     z-index: 0;
                     position: relative;
-                    width: 100%;                   
+                    width: 100%;
+                    right: 60px;                   
                 }
                 
             }
@@ -616,4 +620,56 @@ footer{
     font-size: 16px;
     text-align: center;
     padding: 15px 0;
+}
+
+/* Format tablette (à partir de 768px */
+
+@media screen and (max-width:1068px) {
+    header{
+        padding: 20px;
+
+        .container{
+        
+            nav{
+                .fa-bars{
+                    display: block;
+                    color: var(--white);
+                }
+
+                #desktop{
+                    display:none;
+                }
+            }
+        }
+    }
+
+    main{
+        .container{
+            #qui-suis-je{
+                grid-template-columns: 1fr;
+
+                img{
+                    margin: auto;
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+
+            #ma-formation{
+                padding-left: 20px;
+            }
+
+            #mes-competences {
+                margin: 0 15px;
+            }
+
+            #mes-projets{
+                margin: 0 20px;
+                
+                .cards{
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
 }

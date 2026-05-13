@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/66dfd999d9.js" crossorigin="anonymous"></script>
     <title>John Doe</title>
 </head>
 <body>
@@ -14,7 +15,8 @@
                 <p>Développeur Web et Web Mobile</p>
             </div>
             <nav>
-                <ul>
+                <i class="fa-solid fa-bars"></i>
+                <ul id="desktop">
                     <li><a href="/" id="accueil">Accueil</a></li>
                     <li><a href="#qui-suis-je">Qui suis-je ?</a></li>
                     <li><a href="#ma-formation">Ma formation</a></li>
@@ -23,14 +25,14 @@
                     <li><a href="#contact-modal1" id="bouton">Contactez-moi</a></li>
                 </ul>
                 <div id="contact-modal1" class="modal">
-                    <form class="modal-content">
+                    <form action="#" class="modal-content">
                         <h2>Me contacter</h2>
                         <label for="name">Votre nom :</label>
-                        <input type="text" name="name" placeholder="Votre nom">
+                        <input type="text" name="name" id="name" placeholder="Votre nom">
                         <label for="email">Votre email :</label>
-                        <input type="text" name="email" placeholder="Votre email">
+                        <input type="text" name="email" id="email" placeholder="Votre email">
                         <label for="message">Votre message :</label>
-                        <textarea name="message" id="" rows="2">Votre message</textarea>
+                        <textarea name="message" id="message" rows="2">Votre message</textarea>
                         <button>Envoyer la demande</button>
                     </form>
                     <a href="#" class="modal-close">&times</a>
