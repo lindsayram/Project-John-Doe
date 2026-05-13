@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <div id="logo">
-                <img src="img/Logo.png" alt="logo">
+                <a href="/"><img src="img/Logo.png" alt="logo"></a>
                 <p>Développeur Web et Web Mobile</p>
             </div>
             <nav>
@@ -20,8 +20,21 @@
                     <li><a href="#ma-formation">Ma formation</a></li>
                     <li><a href="#mes-competences">Mes compétences</a></li>
                     <li><a href="#mes-projets">Mes projets</a></li>
-                    <li><button>Contactez-moi</button></li>
+                    <li><a href="#contact-modal1" id="bouton">Contactez-moi</a></li>
                 </ul>
+                <div id="contact-modal1" class="modal">
+                    <form class="modal-content">
+                        <h2>Me contacter</h2>
+                        <label for="name">Votre nom :</label>
+                        <input type="text" name="name" placeholder="Votre nom">
+                        <label for="email">Votre email :</label>
+                        <input type="text" name="email" placeholder="Votre email">
+                        <label for="message">Votre message :</label>
+                        <textarea name="message" id="" rows="2">Votre message</textarea>
+                        <button>Envoyer la demande</button>
+                    </form>
+                    <a href="#" class="modal-close">&times</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -29,7 +42,7 @@
     <main>
         <div class="container">
             <section id="qui-suis-je">
-                <div>
+                <div id="qui-suis-je-contenu">
                     <h1>John Doe - Développeur web et web mobile</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestiae adipisci nulla saepe, ipsa earum, corrupti necessitatibus
                     libero ut nobis sed magni facere blanditiis assumenda. Enim vero perspiciatis beatae animi!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
@@ -39,9 +52,21 @@
                     perferendis porro? Consectetur, laborum quo!<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
                     temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus perspiciatis
                     perferendis porro? Consectetur, laborum quo!</p>
-                    <button>Contactez-moi</button>
+                    <a href="#contact-modal2" id="bouton">Contactez-moi</a>
                 </div>
-                <!-- <i></i> -->
+                <div id="contact-modal2" class="modal">
+                    <form class="modal-content">
+                        <h2>Me contacter</h2>
+                        <label for="name">Votre nom :</label>
+                        <input type="text" name="name" placeholder="Votre nom">
+                        <label for="email">Votre email :</label>
+                        <input type="text" name="email" placeholder="Votre email">
+                        <label for="message">Votre message :</label>
+                        <textarea name="message" id="" rows="2">Votre message</textarea>
+                        <button>Envoyer la demande</button>
+                    </form>
+                    <a href="#" class="modal-close">&times</a>
+                </div>
                 <img src="img/moi.png" alt="">
             </section>
 
