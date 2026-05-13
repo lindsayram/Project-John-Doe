@@ -33,9 +33,10 @@ h3{
     font-weight: bold;
     font-size: 21px;
     margin-bottom: 30px;
+    color: var(--white);
 }
 
-p{
+p, .front, .back{
     color: var(--white);
     font-weight: 400;
     font-family: var(--primaryfont);
@@ -52,6 +53,7 @@ a{
     font-family: var(--primaryfont);
     font-size: 16px;
     font-weight: 400;
+    text-decoration: none;
 }
 
 button{
@@ -64,7 +66,7 @@ button{
     max-width: 1470px;
 }
 
-#qui-suis-je, #ma-formation, #mes-competences{
+#qui-suis-je, #ma-formation, #mes-competences, #mes-projets{
     max-width: 1440px;
 }
 
@@ -104,7 +106,6 @@ header{
                     animation:translate 1s linear forwards;
                 
                     a{
-                        text-decoration: none;
                         color: var(--orange);
                         transition: all 0.3s ease-in-out;
                         
@@ -121,7 +122,7 @@ header{
                     button{
                         background-color: var(--orange);
                         color: white;
-                        padding: 7px;
+                        padding:10px 20px;
                         cursor: pointer;
 
                         &:hover{
@@ -158,7 +159,7 @@ header{
 /* Main */
 main{
     background-color: var(--darkblue);
-    padding-top: 60px;
+    padding: 60px 0;
 
     .container{
         margin: auto;
@@ -191,9 +192,11 @@ main{
                     color: white;
                     padding: 7px;
                     cursor: pointer;
+                    transition: all 0.3s ease-in-out;
 
                     &:hover{
                         background-color: var(--red);
+                        transition: all 0.3s ease-in-out;
                     }
                 }
 
@@ -212,7 +215,7 @@ main{
         }
 
         #ma-formation{
-            margin: 50px auto;
+            margin: 80px auto;
 
             h2{
                 text-align: center;
@@ -221,11 +224,11 @@ main{
             
             #dev{
                 max-width: 1140px;
-                display: flex;
-                justify-content: flex-start;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
                 margin: auto;
                 align-items: center;
-                
+                padding-bottom: 40px;
 
                 img{
                     /* z-index: 0; */
@@ -258,20 +261,22 @@ main{
                     color: var(--white);
                     position: absolute;
                     border: 1px solid var(--white);
-                    text-decoration: none;
                     color: var(--white);
                     padding: 10px 20px;
                     bottom: -23px;
+                    transition: all 0.3s ease-in-out;
 
                     &:hover{
                         background-color: var(--red);
+                        transition: all 0.3s ease-in-out;
                     }
                 }
             }
 
             #dwwm{
                 max-width: 1140px;
-                display: flex;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
                 margin: 50px auto;
                 align-items: center;
 
@@ -297,12 +302,10 @@ main{
                         color: var(--white);
                         position: absolute;
                         border: 1px solid var(--white);
-                        text-decoration: none;
                         color: var(--white);
                         padding: 10px 20px;
                         bottom: -23px;
                         
-
                         &:hover{
                             background-color: var(--red);
                         }
@@ -320,7 +323,7 @@ main{
 
         #mes-competences{
             margin: auto;
-            padding: 30px 0;
+            padding: 50px 0;
 
             h2{
                 text-align: center;
@@ -333,31 +336,127 @@ main{
                 gap: 40px;
 
                 article{
-                    display: grid;
+                    display: flex;
+                    flex-direction: column;
                     gap: 20px;
 
                     details{
                         background-color: var(--white);
+                        padding: 5px;
 
                         summary{
                             color: var(--orange);
                             list-style: none;
-                            padding: 10px;
+                            padding: 10px 0;
+                            margin-left: 15px;
                             display: block;
                             cursor: pointer;
                             width: fit-content;
                             border-bottom: 2px solid var(--red);
+
                         }
 
-                        /* ul{
-                            background-color: var(--white);
-                        } */
-                    }
-                }                
+                        ul{
+
+                            li{
+                                margin: 7px 0;
+                            }
+                        }
+                        
+                    }                
+                }
+            }      
+        }
+
+        #mes-projets{
+            margin: auto;
+            padding: 30px 0;
+
+            #en-tête{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 50px 0;
+
+                a{
+                   color: var(--white); 
+                   border: 1px solid var(--white);
+                   padding: 10px 20px;
+                   transition: all 0.3s ease-in-out;
+
+                   &:hover{
+                    background-color: var(--red);
+                    transition: all 0.3s ease-in-out;
+                   }
+                }
+
             }
-        }      
+            #cards{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 98px;
+                
+                article{
+                    border: 1px solid var(--white);
+                    padding: 25px 15px 0 15px;
+                    position: relative;
+
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        height: 180px;
+                    }
+
+                    h3{
+                        margin-top: 30px;
+                    }
+
+                    p{
+                        font-size: 16px;
+
+                    }
+
+                    a{
+                        color: var(--white); 
+                        border: 1px solid var(--white);
+                        padding: 10px 20px;
+                        position:absolute;
+                        margin: 25px 0;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover{
+                        background-color: var(--red);
+                        transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+
+                .front::before{
+                    content:'Front-end';
+                    color:var(--white);
+                    background-color: var(--darkblue);
+                    font-size: 16px;
+                    top: 45px;
+                    left: 30px;
+                    position: absolute;
+                    padding: 5px 3px;
+                }
+
+                .back::before{
+                    content:'Back-end';
+                    color:var(--white);
+                    background-color: var(--darkblue);
+                    font-size: 16px;
+                    top: 45px;
+                    left: 30px;
+                    position: absolute;
+                    padding: 5px 3px;
+                }
+            }
+        }
     }
 }
+
 
 
 
